@@ -1,0 +1,475 @@
+[
+	{
+		"ability": "每个夜晚*，你要选择一名玩家：他死亡。首个提名你的镇民会在当晚变成邪恶的献礼，而你会随之死亡。但每局游戏只能成功转化一次。",
+		"image": "https://www.bloodstar.xyz/p/Airell_clocktower/Assets_of_Lei_Gallery/lecadeau_assets_of_lei_gallery.png",
+		"edition": "custom",
+		"flavor": "",
+		"id": "lecadeau",
+		"firstNightReminder": "",
+		"otherNightReminder": "如果有镇民在白天提名了献礼，唤醒那名镇民并告诉他你现在是邪恶的献礼，但当天晚上不要让其选择目标攻击，而是标记原献礼死亡。",
+		"name": "献礼",
+		"otherNight": 5401,
+		"setup": 0,
+		"reminders": [
+			"死亡"
+		],
+		"remindersGlobal": ["限一次"],
+		"team": "demon",
+		"firstNight": 0
+	},
+	{
+		"id": "wangshnegjiguzhe",
+		 "image": "https://i.postimg.cc/KvYjy2BH/image.png",
+		 "edition": "custom",
+		 "name": "往生者",
+		 "ability": "你没有阵营且不入村。每个白天，你可以向说书人询问n个是非问题（n由说书人决定）。如果你还原初始或当前魔典，你获胜。如果你对你的信息疯狂，你落败。",
+		 "team": "traveler",
+		 "firstNight": 0,
+		 "otherNight": 1,
+		 "firstNightReminder": "",
+		 "otherNightReminder": "",
+		 "reminders": [
+			 "获胜",
+			 "落败"
+		 ],
+		 "setup": false
+	},
+	{
+		"id": "shengjiezhihun",
+		"image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/spirit_of_ivory.png",
+		"edition": "custom",
+		"name": "圣洁之魂",
+		"setup": false,
+		"reminders": [
+		"禁止邪恶"
+		],
+		"team": "fabled",
+		"ability": "游戏过程中邪恶玩家的总数最多能比初始设置多一名（旅行者不计算在内）。"
+	},
+	{
+		"id": "nailong",
+		"image": "https://i.postimg.cc/BbjLRZJk/image.png",
+		"edition": "custom",
+		"name": "奶龙",
+		"ability": "你可以对“你是奶龙”疯狂，如果你这样做，且有其他玩家对“自己是奶龙”疯狂，他有可能变成奶龙但保留原有角色类型直至下个黎明。",
+		"team": "traveler",
+		"firstNight": 0,
+		"otherNight": 0,
+		"firstNightReminder": "",
+		"otherNightReminder": "",
+		"reminders": [
+			"我是奶龙",
+			"我才是奶龙"
+		],
+		"setup": false
+	},
+	{
+		"id": "kaka",
+		"image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/deviant.png",
+		"edition": "custom",
+		"name": "怪咖",
+		"ability": "如果你表现得很有趣，当天你不能被流放。",
+		"team": "traveler",
+		"firstNight": 0,
+		"otherNight": 0,
+		"firstNightReminder": "",
+		"otherNightReminder": "",
+		"reminders": [],
+		"setup": false
+	},
+	{
+		"id": "diaomindiaomindiaomin222",
+		"image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/diaomin.png",
+		"edition": "custom",
+		"name": "刁民",
+		"ability": "曾在白天粗暴地打断过你的发言的玩家之一会在当晚醉酒，即使你已死亡。",
+		"team": "traveler",
+		"firstNight": 0,
+		"otherNight": 1,
+		"firstNightReminder": "",
+		"otherNightReminder": "如果有人在白天粗暴地打断过刁民的发言，选择让他们当中的一个醉酒，即使刁民已死亡。",
+		"reminders": [
+			"醉酒"
+		]
+	},
+	{
+		"id": "chengbutanglaoda",
+		"image": "https://i.postimg.cc/cLkfj1Xk/image.png",
+		"edition": "custom",
+		"name": "成步堂牢大",
+		"ability": "每个白天限一次，在提名时，你可以大喊異議あり，随后你需要提出自己的意见，与提名者1V1辩论。只有你上一个白天没有异议或你异议失败，你才可以被流放。",
+		"team": "traveler",
+		"firstNight": 0,
+		"otherNight": 0,
+		"firstNightReminder": "",
+		"otherNightReminder": "",
+		"reminders": [
+			"无法流放"
+		],
+		"setup": false
+	},
+	{
+		"id": "guanyuanyuanyuanyuan111",
+		"image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/bureaucrat.png",
+		"edition": "custom",
+		"name": "官员",
+		"ability": "每个夜晚，你要选择除你以外的一名玩家：明天白天，他的投票算作三票。",
+		"team": "traveler",
+		"firstNight": 1,
+		"otherNight": 1,
+		"firstNightReminder": "唤醒官员。让官员指向任意一名玩家。用官员的“3票”提示标记那名被选中的玩家。让官员入睡。",
+		"otherNightReminder": "唤醒官员。让官员指向任意一名玩家。用官员的“3票”提示标记那名被选中的玩家。让官员入睡。",
+		"reminders": [
+			"3票"
+		],
+		"setup": false
+	},
+	{
+		"id": "qigaigaigai111",
+		"image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/beggar.png",
+		"edition": "custom",
+		"name": "乞丐",
+		"ability": "你只能使用投票标记才能投票。死亡的玩家可以将他的投票标记给你，如果他这么做，你会得知他的阵营。你不会中毒和醉酒。",
+		"team": "traveler",
+		"firstNight": 0,
+		"otherNight": 0,
+		"firstNightReminder": "",
+		"otherNightReminder": "",
+		"reminders": [],
+		"setup": false
+	},
+	{
+		"id": "qiangshoushoushou111",
+		"image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/gunslinger.png",
+		"edition": "custom",
+		"name": "枪手",
+		"ability": "每个白天，当首次投票被统计后，你可以选择一名刚投过票的玩家：他死亡。",
+		"team": "traveler",
+		"firstNight": 0,
+		"otherNight": 0,
+		"firstNightReminder": "",
+		"otherNightReminder": "",
+		"reminders": [],
+		"setup": false
+	},
+	{
+		"id": "qiezeizeizei111",
+		"image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/thief.png",
+		"edition": "custom",
+		"name": "窃贼",
+		"ability": "每个夜晚，你要选择除你以外的一名玩家：明天白天他的投票会被算作负数。",
+		"team": "traveler",
+		"firstNight": 1,
+		"otherNight": 1,
+		"firstNightReminder": "唤醒窃贼。让窃贼指向任意一名玩家。用窃贼的“负票”提示标记那名被选中的玩家。让窃贼入睡。",
+		"otherNightReminder": "唤醒窃贼。让窃贼指向任意一名玩家。用窃贼的“负票”提示标记那名被选中的玩家。让窃贼入睡。",
+		"reminders": [
+			"负票"
+		],
+		"setup": false
+	},
+	{
+		"id": "tizuiyangyangyang111",
+		"image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/scapegoat.png",
+		"edition": "custom",
+		"name": "替罪羊",
+		"ability": "如果你的阵营的一名玩家被处决，你可能会代替他被处决。",
+		"team": "traveler",
+		"firstNight": 0,
+		"otherNight": 0,
+		"firstNightReminder": "",
+		"otherNightReminder": "",
+		"reminders": [],
+		"setup": false
+	},
+	{
+		"id": "fafafafafafafafafafa111",
+		"image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/judge.png",
+		"edition": "custom",
+		"name": "法官",
+		"ability": "每局游戏限一次，如果其他玩家发起了提名，你可以选择让本次提名直接执行处决或让投票无效。",
+		"team": "traveler",
+		"firstNight": 0,
+		"otherNight": 0,
+		"firstNightReminder": "",
+		"otherNightReminder": "",
+		"reminders": [
+			"失去能力"
+		],
+		"setup": false
+	},
+	{
+		"id": "nvnvnvnshejian111",
+		"image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/matron.png",
+		"edition": "custom",
+		"name": "女舍监",
+		"ability": "每个白天，你可以选择至多三对玩家交换座位。玩家不能离开座位私聊。",
+		"team": "traveler",
+		"firstNight": 0,
+		"otherNight": 0,
+		"firstNightReminder": "",
+		"otherNightReminder": "",
+		"reminders": [],
+		"setup": false
+	},
+	{
+		"id": "wudushishishifu111",
+		"image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/voudon.png",
+		"edition": "custom",
+		"name": "巫毒师",
+		"ability": "只有你和死亡的玩家可以投票，且投票不需要使用投票标记。忽略票数需要过半的要求。",
+		"team": "traveler",
+		"firstNight": 0,
+		"otherNight": 0,
+		"firstNightReminder": "",
+		"otherNightReminder": "",
+		"reminders": [],
+		"setup": false
+	},
+	{
+		"id": "xuetutututututututtutu111",
+		"image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/apprentice.png",
+		"edition": "custom",
+		"name": "学徒",
+		"ability": "在你的首个夜晚，如果你是善良的，你会获得一个镇民角色的能力；如果你是邪恶的，你会获得一个爪牙角色的能力。",
+		"team": "traveler",
+		"firstNight": 1,
+		"otherNight": 1,
+		"firstNightReminder": "在学徒加入游戏的首个夜晚，唤醒学徒。向学徒展示“你是”信息标记，然后展示一个镇民或爪牙的角色标记。在魔典上，将学徒的角色标记替换为刚刚展示的角色标记，并放置“是学徒”提示标记。这名玩家还是学徒，只是他拥有了该角色的能力。",
+		"otherNightReminder": "在学徒加入游戏的首个夜晚，唤醒学徒。向学徒展示“你是”信息标记，然后展示一个镇民或爪牙的角色标记。在魔典上，将学徒的角色标记替换为刚刚展示的角色标记，并放置“是学徒”提示标记。这名玩家还是学徒，只是他拥有了该角色的能力。",
+		"reminders": [
+			"是学徒"
+		],
+		"setup": false
+	},
+	{
+		"id": "zhujiaoooooooooooooooooo111",
+		"image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/bishop.png",
+		"edition": "custom",
+		"name": "主教",
+		"ability": "只有说书人可以发起提名。每个白天说书人至少要提名一名你对立阵营的玩家。",
+		"team": "traveler",
+		"firstNight": 0,
+		"otherNight": 0,
+		"firstNightReminder": "",
+		"otherNightReminder": "",
+		"reminders": [
+			"提名善良方",
+			"提名邪恶方"
+		],
+		"setup": false
+	},
+	{
+		"id": "jinitaimeibabyohhhh111",
+		"image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/bone_collector.png",
+		"edition": "custom",
+		"name": "集骨者",
+		"ability": "每局游戏限一次，在夜晚时*，你可以选择一名死亡的玩家：他重新获得能力直到下个黄昏。",
+		"team": "traveler",
+		"firstNight": 0,
+		"otherNight": 1,
+		"firstNightReminder": "",
+		"otherNightReminder": "每个夜晚，唤醒集骨者。集骨者要么摇头表示不使用能力，或者是指向任何一名已死亡的玩家。让集骨者重新入睡。",
+		"reminders": [
+			"重获能力",
+			"失去能力"
+		],
+		"setup": false
+	},
+	{
+		"id": "shouchongdashi111",
+		"image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/barista.png",
+		"edition": "custom",
+		"name": "咖啡师",
+		"ability": "每个夜晚，直至下个黄昏，由说书人二选一：1）一名玩家解除并免受醉酒和中毒影响，且会得知正确信息；2）一名玩家的能力可以生效两次。该玩家会得知是哪个效果。",
+		"team": "traveler",
+		"firstNight": 1,
+		"otherNight": 1,
+		"firstNightReminder": "每个夜晚，移除先前的标记并在任一角色标记旁放置咖啡师的“清醒且健康”标记或“行动两次”提示。唤醒那个角色的玩家并向他展示“该角色的能力对你生效”信息标记，咖啡师标记和一根手指（代表他现在清醒且健康）或两根手指（代表他要行动两次）。让这名玩家入睡。",
+		"otherNightReminder": "每个夜晚，移除先前的标记并在任一角色标记旁放置咖啡师的“清醒且健康”标记或“行动两次”提示。唤醒那个角色的玩家并向他展示“该角色的能力对你生效”信息标记，咖啡师标记和一根手指（代表他现在清醒且健康）或两根手指（代表他要行动两次）。让这名玩家入睡。",
+		"reminders": [
+			"清醒且健康",
+			"行动两次",
+			"？"
+		],
+		"setup": false
+	},
+	{
+		"id": "haoshaoanizhegeren111",
+		"image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/harlot.png",
+		"edition": "custom",
+		"name": "流莺",
+		"ability": "每个夜晚*，你要选择一名存活的玩家：如果他同意，你会得知他的角色，但是你们两个可能同时死亡。",
+		"team": "traveler",
+		"firstNight": 0,
+		"otherNight": 1,
+		"firstNightReminder": "",
+		"otherNightReminder": "唤醒流莺。让流莺指向任意一名玩家。让流莺重新入睡。唤醒被选中的玩家，对该玩家展示“该角色的能力对你生效”提示标记和流莺角色标记。该玩家需要通过点头表示是，摇头表示否。然后让该玩家重新入睡。",
+		"reminders": [
+			"死亡"
+		],
+		"setup": false
+	},
+	{
+		"id": "tufuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu111",
+		"image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/butcher.png",
+		"edition": "custom",
+		"name": "屠夫",
+		"ability": "每个白天，首次处决后，你可以再次发起提名。",
+		"team": "traveler",
+		"firstNight": 0,
+		"otherNight": 0,
+		"firstNightReminder": "",
+		"otherNightReminder": "",
+		"reminders": [],
+		"setup": false
+	},
+	{
+		"id": "heibangbangbangbang111",
+		"image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/gangster.png",
+		"edition": "custom",
+		"name": "黑帮",
+		"ability": "每个白天限一次，你可以杀死与你邻近的两名存活的玩家中的一名，但需要另一边那个存活的玩家同意。",
+		"team": "traveler",
+		"firstNight": 0,
+		"otherNight": 0,
+		"firstNightReminder": "",
+		"otherNightReminder": "",
+		"reminders": [],
+		"setup": false
+	},
+	{
+		"id": "zhubiba",
+		"image": "https://clocktower-wiki.gstonegames.com/images/7/78/Gnome.png",
+		"edition": "custom",
+		"name": "侏儒",
+		"ability": "当你加入游戏时，所有玩家会得知一名与你阵营相同的玩家。每当他被提名时，你可以杀死提名者。",
+		"team": "traveler",
+		"firstNight": 0,
+		"otherNight": 0,
+		"firstNightReminder": "",
+		"otherNightReminder": "",
+		"reminders": [
+			"同伴"
+		],
+		"setup": false
+	},
+	{
+		"id": "jiaohuazioooooooo111",
+		"image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/jiaohuazi.png",
+		"edition": "custom",
+		"name": "叫花子",
+		"ability": "每个白天限一次，你可以公开选择一名其他玩家，让他选择一个非恶魔角色：你可能会获得这个角色的能力，直到下个黎明。",
+		"team": "traveler",
+		"firstNight": 0,
+		"otherNight": 1,
+		"firstNightReminder": "",
+		"otherNightReminder": "如果你决定不让叫花子获得这个角色的能力，无事发生。如果你决定让叫花子获得这个角色的能力，那么让他行动。如果该角色已在场，你可以自由决定是先唤醒原角色对应的玩家还是先唤醒叫花子玩家来进行行动。",
+		"reminders": [
+			"乞讨",
+			"是叫花子"
+		],
+		"setup": false
+	},
+	{
+		"id": "22_xixixi",
+		"image": "https://clocktower-wiki.gstonegames.com/images/thumb/1/19/Gardener.png/300px-Gardener.png",
+		"name": "园丁",
+		"team": "fabled",
+		"ability": "由说书人来为一名或更多玩家派发角色。"
+	},
+	{
+		"id": "24_xixixi",
+		"image": "https:\/\/www.bloodstar.xyz\/p\/C2H43g\/xixixi\/24_xixixi.png",
+		"name": "哨兵",
+		"team": "fabled",
+		"ability": "在初始设置时，可能会额外增加或减少一个外来者。"
+	},
+	{
+		"id": "36_xixixi",
+		"image": "https:\/\/www.bloodstar.xyz\/p\/C2H43g\/xixixi\/36_xixixi.png",
+		"name": "桔子",
+		"team": "fabled",
+		"ability": "如果说书人失败了，ta可以嘴硬"
+	},
+	{
+		"id": "28_mengyi",
+		"image": "https://i.postimg.cc/25pS3P68/image.png",
+		"name": "提线催眠师",
+		"team": "fabled",
+		"ability": "说书人会给提线木偶合乎情理的信息，不去唤醒提线多一个好人信息红输了红活该，好人被洗了提线能不能醒凭自己本事"
+	},
+	{
+		"id": "29_mengyi",
+		"image": "https:\/\/www.bloodstar.xyz\/p\/C2H43g\/mengyi\/29_mengyi.png",
+		"name": "摆渡人",
+		"team": "fabled",
+		"ability": "在游戏的最后一天，所有已死亡玩家会重新获得投票标记。"
+	},
+	{
+		"id": "sihuoshangren11111",
+		"image": "https://www.bloodstar.xyz/p/C2H43g/DarkAge/30_darkage.png",
+		"name": "私货商人",
+		"team": "fabled",
+		"ability": "这个剧本包含有自制角色或自制规则。"
+	},
+	{
+		"id": "duzoujia",
+		"image": "https://www.bloodstar.xyz/p/C2H43g/DarkAge/29_darkage.png",
+		"name": "独奏家",
+		"team": "fabled",
+		"ability": "旅行者会被非旅行者角色的能力当作不在游戏中，但恶魔仍然可以选择杀死旅行者。说书人需要在首个旅行者加入时决定是否在本局游戏加入独奏家。独奏家的能力不会影响旅行者能力的发动，如枪手可以正常地杀死举手的玩家。"
+	},
+	{
+		"id": "hongfengzi",
+		"image": "https://i.postimg.cc/25pS3P68/image.png",
+		"name": "哄疯子小助手",
+		"team": "fabled",
+		"ability": "如果邪恶正常互认，在爪牙信息环节，爪牙知道谁是疯子，以及疯子认知中的爪牙。"
+	},
+	{
+		"id": "laodeng",
+		"image": "https://i.postimg.cc/qvhPhqh2/image.png",
+		"name": "老登说书人",
+		"team": "fabled",
+		"ability": "说书人年纪大了，记性和脾气都不好，本局游戏判定以说书人公开说明为准。"
+	},
+	{
+		"id": "hebaodan",
+		"image": "https://i.postimg.cc/ZKQKsZnj/image.png",
+		"name": "荷包蛋香香香",
+		"team": "fabled",
+		"ability": "大家都要和平游戏，不许吵架！吵架的人会发生不好的事！",
+		"reminders": ["不好的事"]
+	},
+	{
+		"id": "hebaodddan",
+		"image": "https://i.postimg.cc/xdmyyHdM/image.png",
+		"name": "白泽",
+		"team": "fabled",
+		"ability": "说书人选定的幸运玩家可能会发生很好的事。", 
+		"reminders": ["很好的事"]
+	},
+	{
+		"id": "skull",
+		"image": "https://i.postimg.cc/76fCnr9c/image.png",
+		"name": "骷髅王",
+		"team": "traveler",
+		"ability": "每局游戏限一次，在夜晚时*，你可以选择一名玩家，你得知他的角色，随后你可以选择你们是否同时死亡。"
+	}, {
+		"ability": "使用灯神的相克规则，所有玩家都会知道其内容。",
+		"image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/djinn.png",
+		"edition": "custom",
+		"flavor": "",
+		"id": "20003_107",
+		"firstNightReminder": "",
+		"otherNightReminder": "",
+		"name": "灯神",
+		"otherNight": 0,
+		"setup": 0,
+		"reminders": [],
+		"remindersGlobal": [],
+		"team": "fabled",
+		"firstNight": 0
+	  }
+]	
