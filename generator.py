@@ -68,6 +68,17 @@ def create_json_with_combinations(selected_names, data_dict):
 
     return filtered_data, not_found, jinx
 
+
+
+#主程序运行
+opening_animation() #开场
+
+# 输入剧本标题和作者
+sname = input("输入剧本标题：")
+author = input("输入作者：")
+logo = input("【如果留空默认使用全追logo】粘贴logo图床地址:")
+if logo == "":
+    logo = "https://www.helloimg.com/i/2024/07/18/669889e8484e6.png"
 #定义初始meta info
 meta_info = {
     "id": "_meta",
@@ -85,17 +96,6 @@ meta_info = {
     "a jinxedName": "相克",
     "a jinxed": "相克" 
 }
-
-#主程序运行
-opening_animation() #开场
-
-# 输入剧本标题和作者
-sname = input("输入剧本标题：")
-author = input("输入作者：")
-logo = input("【如果留空默认使用全追logo】粘贴logo图床地址:")
-if logo == "":
-    logo = "https://www.helloimg.com/i/2024/07/18/669889e8484e6.png"
-
 # 是否添加额外state信息
 add_state = input("是否加入额外信息？(例如“疯狂”；默认有“醉酒/中毒”。留空则不添加，输入任意内容则加入)：")
 if add_state:
@@ -115,7 +115,9 @@ user_input = input("【支持传奇角色、旅行者，自动添加往生者】
 
 # 筛选数据并检查不存在的角色
 filtered_json_data, not_found_names, jinx = create_json_with_combinations(user_input, name_dict)
-
+#自动增加灯神
+if jinx == 1:
+    filtered_json_data, not_found_names, jinx = create_json_with_combinations(user_input+["灯神"], name_dict)
 # 提示未找到的角色
 if not_found_names:
     print(f"以下角色未找到，请检查输入：{', '.join(not_found_names)}")
@@ -124,7 +126,7 @@ else:
 
 # 检查是否有相克
 if jinx:
-    print("找到相克规则，已添加入剧本json。")
+    print("找到相克规则，已添加入剧本json，已自动加入灯神。")
 
 # 将meta信息插入到数据开头
 filtered_json_data.insert(0, meta_info)
