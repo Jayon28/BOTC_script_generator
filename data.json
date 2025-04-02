@@ -1400,7 +1400,7 @@
         "image": "https://clocktower-wiki.gstonegames.com/images/d/d6/Alsaahir.png",
         "edition": "custom",
         "name": "戏法师",
-        "ability": "'每个白天，你可以公开进行一次谁是爪牙，谁是恶魔的猜测。如果你猜对，善良阵营获胜。",
+        "ability": "每个白天，你可以公开进行一次谁是爪牙，谁是恶魔的猜测。如果你猜对，善良阵营获胜。",
         "team": "townsfolk",
         "sch_team": "镇民",
         "firstNight": 0,
