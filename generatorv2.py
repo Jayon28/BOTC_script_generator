@@ -3,12 +3,26 @@ import os
 import tkinter as tk
 from tkinter import messagebox, filedialog, scrolledtext
 from itertools import combinations
+image_overrides = {}
+frame_links = None
 
 # --- 核心逻辑函数 ---
 def load_json_to_dict(json_path):
     with open(json_path, 'r', encoding='utf-8') as file:
         data = json.load(file)
     return {entry["name"]: entry for entry in data if "name" in entry}
+
+#修改图片链接函数
+def edit_image_link():
+    name = simple_input("修改角色图片链接", "请输入要修改图片链接的角色名称：")
+    if not name:
+        return
+    link = simple_input("图片链接", f"请输入 {name} 的新图片链接：")
+    if not link:
+        return
+    image_overrides[name] = link
+    messagebox.showinfo("成功", f"已设置 {name} 的图片链接。将在生成 JSON 时生效。")
+
 
 def create_json_with_combinations(selected_names, data_dict):
     filtered_data = []
@@ -90,6 +104,11 @@ def generate_json():
     if not_found:
         messagebox.showwarning("未找到角色", f"以下角色未找到：{', '.join(not_found)}")
 
+    # 应用图片链接覆盖
+    for entry in filtered_data:
+        if 'name' in entry and entry['name'] in image_overrides:
+            entry['image'] = image_overrides[entry['name']]
+
     # 去重角色，按 name 去重
     unique_data = {}
     for entry in filtered_data:
@@ -108,6 +127,48 @@ def generate_json():
             messagebox.showinfo("完成", f"已生成剧本文件：\n{os.path.abspath(output_path)}")
     else:
         messagebox.showwarning("失败", "未生成文件，检查输入")
+
+#刷新角色链接
+def refresh_link_editor(roles):
+    global frame_links
+    if frame_links:
+        frame_links.destroy()
+
+    # 容器：外层 frame + canvas + scrollbar
+    container = tk.Frame(root)
+    container.pack(fill="both", expand=True, padx=10, pady=5)
+
+    canvas = tk.Canvas(container, height=200)
+    scrollbar = tk.Scrollbar(container, orient="vertical", command=canvas.yview)
+    canvas.configure(yscrollcommand=scrollbar.set)
+
+    canvas.pack(side="left", fill="both", expand=True)
+    scrollbar.pack(side="right", fill="y")
+
+    frame_links = tk.Frame(canvas)
+    canvas.create_window((0, 0), window=frame_links, anchor="nw")
+
+    def on_configure(event):
+        canvas.configure(scrollregion=canvas.bbox("all"))
+    frame_links.bind("<Configure>", on_configure)
+
+    # 添加角色显示行
+    for role in roles:
+        row = tk.Frame(frame_links)
+        row.pack(fill="x", pady=1)
+        tk.Label(row, text=role, width=20, anchor="w").pack(side=tk.LEFT)
+        link_label = tk.Label(row, text=image_overrides.get(role, "(使用默认)"), fg="blue", cursor="hand2", anchor="w", wraplength=400, justify="left")
+        link_label.pack(side=tk.LEFT, fill="x", expand=True)
+
+        def bind_label(label=link_label, role=role):
+            def on_click(event):
+                new_link = simple_input("图片链接", f"{role} 的新图片链接：")
+                if new_link:
+                    image_overrides[role] = new_link
+                    label.config(text=new_link)
+            label.bind("<Button-1>", on_click)
+        bind_label()
+
 
 def add_state_row():
     row_frame = tk.Frame(frame_states)
@@ -176,6 +237,8 @@ def import_json():
             with open(custom_path, 'w', encoding='utf-8') as f:
                 json.dump(existing, f, ensure_ascii=False, indent=2)
             messagebox.showinfo("新增角色", f"已添加 {len(new_roles)} 个新角色到 custom.json")
+        
+        refresh_link_editor(roles)
         messagebox.showinfo("导入成功", "剧本内容已导入")
     except Exception as e:
         messagebox.showerror("导入失败", f"无法导入 JSON 文件：{e}")
@@ -222,7 +285,7 @@ for file in ['data.json', 'custom.json']:
 
 # --- GUI 设置 ---
 root = tk.Tk()
-root.title("剧本生成器 by Jayon from [SUI染钟楼]")
+root.title("剧本生成器 by Jayon from [SUI染钟楼] V3.0")
 root.geometry("650x500")
 extra_states = []
 
@@ -258,7 +321,27 @@ frame_buttons.pack(pady=5)
 tk.Button(frame_buttons, text="导入已有JSON", command=import_json).pack(side=tk.LEFT, padx=5)
 tk.Button(frame_buttons, text="添加角色", command=add_role).pack(side=tk.LEFT, padx=5)
 tk.Button(frame_buttons, text="删除角色", command=remove_role).pack(side=tk.LEFT, padx=5)
+tk.Button(frame_buttons, text="修改图片链接", command=edit_image_link).pack(side=tk.LEFT, padx=5) #修改图片链接
 
 tk.Button(root, text="生成JSON文件", command=generate_json, bg="#4CAF50", fg="white", font=("Arial", 12, "bold"), padx=10, pady=5).pack(pady=10)
 
+# 添加 logo 图片显示
+try:
+    from urllib.request import urlopen
+    from PIL import Image, ImageTk
+    import io
+
+    image_url = "https://i.postimg.cc/VNc6Dkx4/image.png"
+    image_bytes = urlopen(image_url).read()
+    image_data = Image.open(io.BytesIO(image_bytes))
+    image_data = image_data.resize((100, 100))
+    logo_img = ImageTk.PhotoImage(image_data)
+
+    logo_label = tk.Label(root, image=logo_img)
+    logo_label.image = logo_img
+    logo_label.place(relx=1.0, rely=1.0, anchor='se', x=-10, y=-10)
+except Exception as e:
+    print("无法加载Logo图片：", e)
+    
+#root.geometry("800x800")  # 临时放大窗口确保可见
 root.mainloop()
